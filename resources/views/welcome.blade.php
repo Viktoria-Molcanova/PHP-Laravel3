@@ -5,6 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
+        @extends('layouts.default')
+
+        @section('content')
+            <h2>Главная страница</h2>
+            @if ($age > 18)
+                <p>Возраст: {{ $age }}</p>
+            @else
+                <p>Указанный человек слишком молод.</p>
+            @endif
+        @endsection
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
